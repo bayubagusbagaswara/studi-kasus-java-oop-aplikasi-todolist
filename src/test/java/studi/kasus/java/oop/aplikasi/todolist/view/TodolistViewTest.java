@@ -8,7 +8,8 @@ import studi.kasus.java.oop.aplikasi.todolist.service.TodolistServiceImpl;
 public class TodolistViewTest {
 
     public static void main(String[] args) {
-        testShowTodolist();
+//        testShowTodolist();
+        testAddTodolist();
     }
 
     public static void testShowTodolist(){
@@ -21,5 +22,15 @@ public class TodolistViewTest {
         todolistService.addTodolist("Belajar Java Standard Classes");
 
         todolistView.showTodolist();
+    }
+
+    public static void testAddTodolist(){
+        TodolistRepository todolistRepository = new TodolistRepositoryImpl();
+        TodolistService todolistService = new TodolistServiceImpl(todolistRepository);
+        TodolistView todolistView = new TodolistView(todolistService);
+
+        todolistView.addTodolist();
+
+        todolistService.showTodolist();
     }
 }
