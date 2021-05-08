@@ -7,7 +7,8 @@ import studi.kasus.java.oop.aplikasi.todolist.repository.TodolistRepositoryImpl;
 public class TodolistServiceTest {
     public static void main(String[] args) {
 //        testShowTodoList();
-        testAddTodolist();
+//        testAddTodolist();
+        testRemoveTodolist();
     }
 
     public static void testShowTodoList(){
@@ -28,6 +29,23 @@ public class TodolistServiceTest {
         todolistService.addTodolist("Belajar Java Dasar");
         todolistService.addTodolist("Belajar Java OOP");
         todolistService.addTodolist("Belajar Java Standard Classes");
+
+        todolistService.showTodolist();
+    }
+
+    public static void testRemoveTodolist(){
+        TodolistRepository todolistRepository = new TodolistRepositoryImpl();
+        TodolistService todolistService = new TodolistServiceImpl(todolistRepository);
+
+        // tambahkan dulu todolistnya
+        todolistService.addTodolist("Belajar Java Dasar");
+        todolistService.addTodolist("Belajar Java OOP");
+        todolistService.addTodolist("Belajar Java Standard Classes");
+
+        todolistService.showTodolist();
+
+        todolistService.removeTodolist(5);
+        todolistService.removeTodolist(2);
 
         todolistService.showTodolist();
 

@@ -33,11 +33,16 @@ public class TodolistServiceImpl implements TodolistService {
         Todolist todolist = new Todolist(todo);
         todolistRepository.add(todolist);
         System.out.println("SUKSES MENAMBAH TODO : " + todo);
-
     }
 
     @Override
     public void removeTodolist(Integer number) {
-
+        // cek dulu success nya
+        boolean success = todolistRepository.remove(number);
+        if(success) {
+            System.out.println("SUKSES MENGHAPUS TODO : " + number);
+        } else {
+            System.out.println("GAGAL MENGHAPUS TODO : " + number);
+        }
     }
 }
