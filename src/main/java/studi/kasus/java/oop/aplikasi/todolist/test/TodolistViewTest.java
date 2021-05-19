@@ -1,9 +1,10 @@
-package studi.kasus.java.oop.aplikasi.todolist.view;
+package studi.kasus.java.oop.aplikasi.todolist.test;
 
 import studi.kasus.java.oop.aplikasi.todolist.repository.TodolistRepository;
 import studi.kasus.java.oop.aplikasi.todolist.repository.TodolistRepositoryImpl;
 import studi.kasus.java.oop.aplikasi.todolist.service.TodolistService;
 import studi.kasus.java.oop.aplikasi.todolist.service.TodolistServiceImpl;
+import studi.kasus.java.oop.aplikasi.todolist.view.TodolistView;
 
 public class TodolistViewTest {
 

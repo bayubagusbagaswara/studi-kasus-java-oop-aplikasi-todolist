@@ -1,8 +1,10 @@
-package studi.kasus.java.oop.aplikasi.todolist.service;
+package studi.kasus.java.oop.aplikasi.todolist.test;
 
 import studi.kasus.java.oop.aplikasi.todolist.entity.Todolist;
 import studi.kasus.java.oop.aplikasi.todolist.repository.TodolistRepository;
 import studi.kasus.java.oop.aplikasi.todolist.repository.TodolistRepositoryImpl;
+import studi.kasus.java.oop.aplikasi.todolist.service.TodolistService;
+import studi.kasus.java.oop.aplikasi.todolist.service.TodolistServiceImpl;
 
 public class TodolistServiceTest {
     public static void main(String[] args) {
